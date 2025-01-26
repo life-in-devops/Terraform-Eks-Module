@@ -38,7 +38,7 @@ module "eks" {
   subnet_ids = module.vpc.private_subnets
 
   eks_managed_node_groups = {
-    example = {
+    eks_node_group = {
       # Starting on 1.30, AL2023 is the default AMI type for EKS managed node groups
       ami_type       = "AL2_x86_64"
       instance_types = ["t3a.small"]
